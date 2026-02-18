@@ -1,0 +1,87 @@
+.exam-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.exam-left {
+  width: 70%;
+  padding: 25px;
+  border-right: 1px solid #ddd;
+}
+
+.exam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.question-box {
+  margin-top: 30px;
+}
+
+.option-button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+
+.option-button:hover {
+  background-color: #f0f0f0;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.exam-right {
+  width: 30%;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.palette-btn {
+  padding: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.palette-answered {
+  background-color: green;
+}
+
+.palette-marked {
+  background-color: orange;
+}
+
+.palette-default {
+  background-color: gray;
+}
