@@ -4,10 +4,10 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "postinstall": "prisma generate"
+    "postinstall": "npx prisma generate"
   },
   "dependencies": {
-    "@prisma/client": "^5.0.0",
+    "@prisma/client": "^5.22.0",
     "bcrypt": "^5.1.0",
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.5",
@@ -17,6 +17,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.0",
-    "prisma": "^5.0.0"
+    "prisma": "^5.22.0"
   }
 }
