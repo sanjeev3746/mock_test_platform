@@ -1,6 +1,9 @@
 {
   "name": "mocktest-backend",
   "version": "1.0.0",
+  "engines": {
+  "node": "20.x"
+  },
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js"
