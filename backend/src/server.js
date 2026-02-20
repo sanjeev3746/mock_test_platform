@@ -4,7 +4,16 @@ const cors = require("cors")
 
 const app = express()
 
-app.use(cors())
+const cors = require("cors")
+
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://mock-test-platform-two.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}))
 app.use(express.json())
 
 app.use("/api/auth", require("./routes/auth.routes"))
