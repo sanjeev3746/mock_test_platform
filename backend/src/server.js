@@ -4,8 +4,6 @@ const cors = require("cors")
 
 const app = express()
 
-const cors = require("cors")
-
 app.use(cors({
   origin: [
     "http://localhost:3000",
@@ -14,8 +12,8 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }))
-app.use(express.json())
 
+app.use(express.json())
 app.use("/api/auth", require("./routes/auth.routes"))
 app.use("/api/attempt", require("./routes/attempt.routes"))
 app.use("/api/test", require("./routes/test.routes"))
