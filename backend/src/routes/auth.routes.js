@@ -8,6 +8,18 @@ router.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body
 
+    if (!name || !email || !password) {
+      return res.status(400).json({ message: "All fields required" })
+    }
+
+    const existing = await prisma.user.findUnique({
+      where: { email }
+    })
+
+    if (existing) {
+      return res.status(400).json({ message: "Email already exists" })
+    }
+
     const hashed = await bcrypt.hash(password, 10)
 
     const user = await prisma.user.create({
@@ -19,7 +31,9 @@ router.post("/register", async (req, res) => {
     })
 
     res.json({ message: "User created" })
+
   } catch (error) {
+    console.error("REGISTER ERROR:", error)  // 🔥 ADD THIS
     res.status(500).json({ message: "Error registering" })
   }
 })
